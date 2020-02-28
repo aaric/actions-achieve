@@ -26,8 +26,9 @@ public class Swagger2Config extends AbstractSwagger2ConfigSupport {
                 .globalOperationParameters(globalOperationParameters())
                 /*.groupName("v1")*/
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.incarcloud.hproj"))
-                .paths(PathSelectors.regex("/hproj/.*"))
+                .apis(RequestHandlerSelectors.basePackage("com.incarcloud"))
+                //.paths(PathSelectors.regex("/hproj/.*"))
+                .paths(PathSelectors.any())
                 .build();
     }
 }

@@ -1,5 +1,6 @@
 package com.incarcloud.hproj.api.impl;
 
+import com.incarcloud.common.data.ResponseData;
 import com.incarcloud.hproj.api.HelloApi;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ public class HelloApiImpl implements HelloApi {
 
     @Override
     @GetMapping("/hproj/hello/sayHi")
-    public String sayHi() {
-        return "Good morning";
+    public ResponseData<String> sayHi() {
+        return ResponseData.ok("Good morning").extraMsg("请求成功");
     }
 }
