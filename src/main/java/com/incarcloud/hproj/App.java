@@ -11,7 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication(scanBasePackages = {
         "com.incarcloud.mvc",
-        "com.incarcloud.hproj"
+        "com.incarcloud.hproj",
+        "com.incarcloud.system"
 })
 public class App {
 

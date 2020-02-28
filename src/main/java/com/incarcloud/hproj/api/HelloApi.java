@@ -1,5 +1,6 @@
 package com.incarcloud.hproj.api;
 
+import com.incarcloud.common.data.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,5 +16,5 @@ public interface HelloApi {
 
     @ApiOperation(value = "问候")
     @GetMapping("/hproj/hello/sayHi")
-    String sayHi();
+    ResponseData<String> sayHi();
 }
