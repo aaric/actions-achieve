@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Aaric, created on 2020-02-28T11:16.
  * @version 0.0.1-SNAPSHOT
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.incarcloud.mvc", "com.incarcloud.hproj"})
 public class App {
 
     /**

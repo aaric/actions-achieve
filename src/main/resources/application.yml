@@ -24,3 +24,12 @@ logging:
     path: ${LOGGING_FILE_PATH:./}
     name: output.log
     max-size: ${LOGGING_FILE_MAX_SIZE:20MB}
+
+# Incarcloud settings
+incarcloud:
+  swagger2:
+    api:
+      title: 问候项目在线API文档
+      description: 本文档包含该项目全部业务接口，注意保密。(by incar)
+      service-url: http://localhost:8080/doc.html
+      version: 0.0.2-SNAPSHOT
