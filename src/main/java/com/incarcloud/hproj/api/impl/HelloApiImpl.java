@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 0.0.1-SNAPSHOT
  */
 @RestController
-public class UserInfoApiImpl implements HelloApi {
+public class HelloApiImpl implements HelloApi {
 
     @Override
     @GetMapping("/hproj/hello/sayHi")

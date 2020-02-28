@@ -21,9 +21,10 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.incarcloud:reuse-autoconfig-swagger2:0.4.0-SNAPSHOT'
+	// jar reuse
+	implementation "com.incarcloud:reuse-autoconfig-swagger2:0.4.0-SNAPSHOT"
 
-	//implementation 'io.swagger:swagger-annotations:1.5.24'
+	//implementation "io.swagger:swagger-annotations:1.5.24"
 	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
 
 	testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
