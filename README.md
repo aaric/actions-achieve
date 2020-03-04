@@ -2,7 +2,7 @@
 
 > Actions Learning.
 
-[![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/Java%20CI/badge.svg?branch=master)]
+![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/Java%20CI/badge.svg?branch=master)
 
 ## Workflow
 
@@ -34,5 +34,5 @@ jobs:
 https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg?branch=<branch-name>
 
 # sample
-[![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/Java%20CI/badge.svg?branch=master)]
+![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/Java%20CI/badge.svg?branch=master)
 ```
