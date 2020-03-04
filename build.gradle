@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.incarcloud"
-version = "0.0.3-SNAPSHOT"
+version = "0.1.0-SNAPSHOT"
 
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
@@ -22,10 +22,10 @@ repositories {
 
 dependencies {
 	// jar reuse with api
-	implementation "com.incarcloud:reuse-system-api-impl:0.4.0-SNAPSHOT"
+	implementation "com.incarcloud:reuse-system-api-impl:0.6.0-SNAPSHOT"
 
 	// jar reuse
-	implementation "com.incarcloud:reuse-autoconfig-swagger2:0.4.0-SNAPSHOT"
+	implementation "com.incarcloud:reuse-autoconfig-swagger2:0.6.0-SNAPSHOT"
 
 	//implementation "io.swagger:swagger-annotations:1.5.24"
 	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
