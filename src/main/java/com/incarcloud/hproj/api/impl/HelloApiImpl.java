@@ -17,6 +17,6 @@ public class HelloApiImpl implements HelloApi {
     @Override
     @GetMapping("/hproj/hello/sayHi")
     public ResponseData<String> sayHi() {
-        return ResponseData.ok("Good morning").extraMsg("请求成功");
+        return ResponseData.ok("Good night").extraMsg("请求成功");
     }
 }
