@@ -13,7 +13,7 @@
 ## Workflow
 
 ```yaml
-name: Java CI
+name: build
 
 on: [push]
 
@@ -26,11 +26,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
-
+      run: |
+        chmod +x gradlew
+        ./gradlew build
 ```
 
 ## Badge
@@ -40,5 +39,5 @@ jobs:
 https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg?branch=<branch-name>
 
 # sample
-![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/Java%20CI/badge.svg?branch=master)
+![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/build/badge.svg?branch=master)
 ```
