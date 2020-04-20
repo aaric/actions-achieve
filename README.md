@@ -8,8 +8,6 @@
 
 > Actions Learning.
 
-![Actions Build Status](https://github.com/aaric/actions-achieve/workflows/Java%20CI/badge.svg?branch=master)
-
 ## Workflow
 
 ```yaml
