@@ -4,8 +4,8 @@ on:
   pull_request:
     branches:
       - master
-    #paths:
-    #  - src/**
+#    paths:
+#      - src/**
 jobs:
   build:
     runs-on: ubuntu-latest
