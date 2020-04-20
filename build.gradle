@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.incarcloud"
-version = "0.1.0-SNAPSHOT"
+version = "0.1.1-SNAPSHOT"
 
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
@@ -22,13 +22,46 @@ repositories {
 
 dependencies {
 	// jar reuse with api
-	implementation "com.incarcloud:reuse-system-api-impl:0.6.0-SNAPSHOT"
+	implementation "com.incarcloud:reuse-system-api-impl"
 
 	// jar reuse
-	implementation "com.incarcloud:reuse-autoconfig-swagger2:0.6.0-SNAPSHOT"
+	implementation "com.incarcloud:reuse-autoconfig-swagger2"
 
 	//implementation "io.swagger:swagger-annotations:1.5.24"
-	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+	implementation "org.springframework.boot:spring-boot-starter-web"
 
-	testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+	testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.boot:spring-boot-dependencies:$springBootVersion"
+	}
+
+	dependencies {
+		dependency "com.incarcloud:reuse-system-api-impl:0.6.0-SNAPSHOT"
+		dependency "com.incarcloud:reuse-autoconfig-swagger2:0.6.0-SNAPSHOT"
+	}
+}
+
+compileJava {
+	options.encoding = "UTF-8"
+	options.compilerArgs << "-Xlint:unchecked"
+}
+
+compileTestJava {
+	options.encoding = "UTF-8"
+	options.compilerArgs << "-Xlint:unchecked"
+}
+
+task removeLombokConfig() {
+	def subProjectPath = project.projectDir
+	if (null != subProjectPath) {
+		def lombokConfigFile = new File(subProjectPath, "lombok.config")
+		if (lombokConfigFile.exists()) {
+			lombokConfigFile.delete()
+		}
+	}
+}
+
+defaultTasks "assemble"
